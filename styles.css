@@ -1,0 +1,61 @@
+/* General Page Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Title */
+.title {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 10);
+}
+/* Chessboard Container */
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 60px); /* Incorrect sizing */
+    grid-template-rows: repeat(8, 60px);
+    border: 3px solid rgb(255, 255, 255); /* Border too thin */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 8);
+}
+
+/* Chess Squares */
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Smaller font size */
+    font-weight: normal; /* Weight not bold */
+    transition: transform 0.3s ease;
+}
+
+/* Chess Board Colors */
+.light {
+    background-color: #cecece; /* Colors too light */
+}
+
+.dark {
+    background-color: #1d1c1c; /* Colors too dark */
+}
+
+/* Hover Effect */
+.square:hover {
+    transform: scale(1.05); /* Subtle effect */
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .chessboard {
+        grid-template-columns: repeat(8, 35px); /* Incorrect responsive size */
+        grid-template-rows: repeat(8, 35px);
+    }
+
+    .square {
+        font-size: 1rem;
+    }
+}
